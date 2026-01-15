@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+  --font-redhat: 'Red Hat Display', sans-serif;
+  --color-cyan-600: #4d96a9;
+  --color-cyan-300: #8fe3f9;
+  --color-purple-600: #855fb1;
+  --color-purple-300: #d9b8ff;
+  --color-slate-900: #28283d;
+  --color-slate-600: #87879d;
+  --color-slate-300: #d1d1df;
+  --color-light-gray: #fafafa;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-black text-slate-900 leading-[1.1];
+  }
+
+  h1 {
+    @apply text-[2.5rem] md:text-5xl lg:text-[4rem];
+  }
+
+  h2 {
+    @apply font-black text-[2rem] md:text-4xl lg:text-[2.5rem];
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-296 w-full px-8 mx-auto;
+  }
+
+  .button {
+    @apply py-4 px-10 flex items-center justify-center text-center rounded-[29px] gap-1 font-black text-light-gray bg-cyan-600 transition;
+
+    span {
+      @apply text-cyan-300;
+    }
+
+    &:hover {
+      @apply bg-[#71c0d4];
+    }
+  }
+
+  .button-secondary {
+    @apply bg-purple-600;
+
+    span {
+      @apply text-purple-300;
+    }
+
+    &:hover {
+      @apply bg-[#b18bdd];
+    }
+  }
+
+  .person-avatar {
+    @apply max-w-14.5 min-w-14.5  md:max-w-27.5 md:min-w-27.5 w-full h-fit overflow-hidden rounded-full;
+
+    img {
+      @apply w-full h-full object-cover;
+    }
+  }
+
+  .point-item {
+    @apply w-14 h-14 relative  flex items-center justify-center rounded-full bg-light-gray border border-slate-300 text-center font-black text-base text-slate-600 pointer-events-none select-none before:content-[''] before:w-px before:h-20 before:bg-slate-300 before:absolute before:left-[50%] before:-top-20 before:-translate-x-[50%];
+  }
+
+  .collage-item {
+    @apply max-w-37 w-full h-36 rounded-lg overflow-hidden md:max-w-38 md:h-40 lg:max-w-64 lg:h-64;
+
+    img {
+      @apply w-full h-full object-cover;
+    }
+  }
+}
