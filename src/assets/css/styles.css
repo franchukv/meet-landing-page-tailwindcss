@@ -39,7 +39,7 @@
   }
 
   .button {
-    @apply py-4 px-10 flex items-center justify-center text-center rounded-[29px] gap-1 font-black text-light-gray bg-cyan-600 transition;
+    @apply py-[14.5px] px-10 flex items-center justify-center text-center rounded-[29px] gap-1 leading-normal font-black text-light-gray bg-cyan-600 transition;
 
     span {
       @apply text-cyan-300;
