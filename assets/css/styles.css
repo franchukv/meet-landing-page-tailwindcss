@@ -343,6 +343,12 @@
   .object-contain {
     object-fit: contain;
   }
+  .py-5 {
+    padding-block: calc(var(--spacing) * 5);
+  }
+  .py-5\.75 {
+    padding-block: calc(var(--spacing) * 5.75);
+  }
   .py-16 {
     padding-block: calc(var(--spacing) * 16);
   }
@@ -525,6 +531,11 @@
   .lg\:gap-21 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 21);
+    }
+  }
+  .lg\:py-5\.75 {
+    @media (width >= 64rem) {
+      padding-block: calc(var(--spacing) * 5.75);
     }
   }
   .lg\:py-28 {
