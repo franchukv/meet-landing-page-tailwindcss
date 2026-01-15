@@ -192,11 +192,20 @@
   .relative {
     position: relative;
   }
+  .-mt-7 {
+    margin-top: calc(var(--spacing) * -7);
+  }
   .-mt-7\.5 {
     margin-top: calc(var(--spacing) * -7.5);
   }
+  .-mt-23 {
+    margin-top: calc(var(--spacing) * -23);
+  }
   .-mt-23\.25 {
     margin-top: calc(var(--spacing) * -23.25);
+  }
+  .mt-7 {
+    margin-top: calc(var(--spacing) * 7);
   }
   .mt-7\.5 {
     margin-top: calc(var(--spacing) * 7.5);
@@ -222,20 +231,35 @@
   .hidden {
     display: none;
   }
+  .table {
+    display: table;
+  }
   .h-full {
     height: 100%;
   }
   .w-full {
     width: 100%;
   }
+  .max-w-29 {
+    max-width: calc(var(--spacing) * 29);
+  }
   .max-w-29\.5 {
     max-width: calc(var(--spacing) * 29.5);
+  }
+  .max-w-102 {
+    max-width: calc(var(--spacing) * 102);
   }
   .max-w-102\.5 {
     max-width: calc(var(--spacing) * 102.5);
   }
   .max-w-126 {
     max-width: calc(var(--spacing) * 126);
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
   }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -279,6 +303,9 @@
   .gap-x-8 {
     column-gap: calc(var(--spacing) * 8);
   }
+  .gap-y-3 {
+    row-gap: calc(var(--spacing) * 3);
+  }
   .gap-y-3\.5 {
     row-gap: calc(var(--spacing) * 3.5);
   }
@@ -288,11 +315,21 @@
   .overflow-hidden {
     overflow: hidden;
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .bg-light-gray {
     background-color: var(--color-light-gray);
   }
+  .bg-\[url\(\'\.\.\/images\/footer-bg\.jpg\'\)\] {
+    background-image: url('../images/footer-bg.jpg');
+  }
   .bg-\[url\(\'\.\/assets\/images\/footer-bg\.jpg\'\)\] {
     background-image: url('./assets/images/footer-bg.jpg');
+  }
+  .bg-\[url\(\'\/assets\/images\/footer-bg\.jpg\'\)\] {
+    background-image: url('/assets/images/footer-bg.jpg');
   }
   .bg-cover {
     background-size: cover;
@@ -364,6 +401,13 @@
   }
   .uppercase {
     text-transform: uppercase;
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .min-\[1270px\]\:absolute {
     @media (width >= 1270px) {
@@ -690,6 +734,11 @@
     }
   }
 }
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-leading {
   syntax: "*";
   inherits: false;
@@ -702,7 +751,7 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-border-style {
+@property --tw-outline-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
@@ -730,10 +779,11 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-tracking: initial;
-      --tw-border-style: solid;
+      --tw-outline-style: solid;
       --tw-content: "";
       --tw-translate-x: 0;
       --tw-translate-y: 0;
