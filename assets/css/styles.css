@@ -420,6 +420,16 @@
       position: absolute;
     }
   }
+  .min-\[1270px\]\:-mt-14\.25 {
+    @media (width >= 1270px) {
+      margin-top: calc(var(--spacing) * -14.25);
+    }
+  }
+  .min-\[1270px\]\:mt-14\.25 {
+    @media (width >= 1270px) {
+      margin-top: calc(var(--spacing) * 14.25);
+    }
+  }
   .min-\[1270px\]\:w-full {
     @media (width >= 1270px) {
       width: 100%;
